@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self'; script-src 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>To Do List App</title>
+</head>
+
+<body>    
+    <div class="d-flex flex-column align-items-evenly mt-vh-25 vh-100" style="max-width: 30em; margin: 0 auto;">
+        <div class="frame">
+            <h1 class="fs-1">ToDo List App</h1>
+
+            <section style="margin-bottom: 0.5em;">                
+                <button id="add_task_dialog_btn" class="add-task-dial-btn" data-bs-toggle="modal"
+                    data-bs-target="#add_task_modal"><img src="./images/png/plus-circle-white.png" alt=""><span> Add task</span></button>
+                <div class="btns">                    
+                    <select name="sort_select" id="sort_select" class="form-select" aria-label="sort by">
+                        <option value="date" selected>By date</option>                        
+                        <option value="date_reverse">By date reverse</option>                        
+                        <option value="name">By name</option>
+                    </select>
+                    <button id="refresh_btn" class="btn btn-dark"><img src="./images/svg/repeat-solid.svg" alt=""></button>                    
+                </div>
+            </section>
+
+            <!-- <input type="date" name="task_date" id="task_date"> -->
+
+            <section style="width: 100%;">                
+                <ul id="task_list" class="task_list"></ul>
+            </section>
+        </div>
+    </div>
+
+
+    <script type="module" src="./scripts/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="./lib/components/add_task_modal.js"></script>
+    <script type="module" src="./lib/components/edit_task_modal.js"></script>
+    <script type="module" src="./renderer.js"></script>
+</body>
+
+</html>
