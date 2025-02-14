@@ -5,6 +5,19 @@ export default {
   packagerConfig: {
     asar: true,
   },
+  publishers: [
+		{
+			name: '@electron-forge/publisher-github',
+			config: {
+				repository: {
+					owner: 'Joseph-BIPT',
+					name: 'todo_list'
+				},
+				prerelease: false,
+				draft: true
+			}
+		}
+	],
   rebuildConfig: {},
   makers: [
     {

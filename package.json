@@ -6,8 +6,10 @@
   "scripts": {
     "start": "nodemon --exec electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
+  "repository": "https://github.com/Joseph-BIPT/todo_list",
   "author": "Joseph",
   "license": "ISC",
   "description": "Simple ToDo list app for portfolio",
